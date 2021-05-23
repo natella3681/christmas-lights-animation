@@ -1,0 +1,119 @@
+body {
+    background: #100a1c;
+  }
+  @keyframes rballs {
+    from { 
+          opacity: 1.0;
+          box-shadow:0 0 30px 5px #ff4500;
+          } 
+    to { opacity: 0.4; 
+          box-shadow: none;}
+  }
+  @keyframes yballs{
+    from { opacity: 1.0;
+            box-shadow:0 0 30px 5px #ffff00;
+          } 
+    to { opacity: 0.4; 
+         box-shadow: none;}
+  }
+  @keyframes gballs{
+    from { opacity: 1.0;
+           box-shadow:0 0 30px 5px #00fa9a} 
+    to { opacity: 0.4;
+        box-shadow: none;}
+  }
+  @keyframes bballs{
+    from { opacity: 1.0;
+           box-shadow:0 0 30px 5px #00bfff;
+          } 
+    to { opacity: 0.4; 
+         box-shadow: none; }
+  }
+  .container{
+    width: 90%;
+  }
+  .item-wrapper {
+    width: 90%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  .item {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    position: relative;
+    margin-top: 5px;
+  }
+  .item::before {
+    content: "";
+    position: absolute;
+    background: #3d3c3c;
+    width: 15px;
+    height: 10px;
+    top: -9px;
+    left: 27px;
+    border-radius: 3px;
+  }
+  
+  .red {
+    background: #ff4500;
+    animation: rballs 1s infinite;
+  }
+  
+  .yellow {
+    background: #ffff00;
+    animation: yballs 1.1s infinite;
+  }
+  
+  .green {
+    background: #00fa9a;
+    animation: gballs 1.2s infinite;
+  }
+  
+  .blue {
+    background: #00bfff;
+    animation: bballs 1.3s infinite;
+  }
+  
+  .manage-lights {
+    margin: 50px 50%;
+  }
+  .btn {
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 10px 25px;
+    background: #191970;
+    color: #00bfff;
+    border: none;
+    font-size: 20px;
+    box-shadow:0 0 30px 5px #00bfff;
+    border-radius: 3px;
+  }
+  @media(max-width: 1000px) {
+      .container {
+          width: 100%;
+      }
+      .item-wrapper {
+          width: 100%;
+      }
+  }
+ @media(max-width: 800px) {
+    .item {
+        width: 40px;
+        height: 40px;
+    }
+    .item::before {
+        left: 13px;
+    }
+ }
+ @media(max-width: 530px) {
+    .item {
+        width: 30px;
+        height: 30px;
+    }
+    .item::before {
+        left: 11px;
+        width: 10px;
+    }
+ }
